@@ -54,6 +54,6 @@ class CitiesController < ApplicationController
     end
 
     def city_params
-      params[:city]
+      params.require(:city).permit(:population,:name,:country,:region,:longitude,:latitude,:home_town_id)
     end
 end
